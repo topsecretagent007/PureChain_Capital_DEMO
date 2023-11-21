@@ -4,7 +4,7 @@ import TokenIcon1 from '../assets/tokenImage/ether.svg'
 import TokenIcon2 from '../assets/tokenImage/monero.svg'
 import TokenIcon3 from '../assets/tokenImage/solana.png'
 import TokenIcon4 from '../assets/tokenImage/bitcoin.png'
-import TokenIcon5 from '../assets/tokenImage/zero_gra.svg'
+import TokenIcon5 from '../assets/tokenImage/icon-bg.png'
 
 export default function AnimationToken () {
   return (

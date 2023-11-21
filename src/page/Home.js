@@ -25,7 +25,7 @@ export default function Home () {
   }, [])
 
   return (
-    <div className='w-full justify-center items-center flex flex-row bg-gradient-to-t from-black to-indigo-900'>
+    <div className='w-full justify-center items-center flex flex-row bg-[#322f7f]'>
       <div className='container w-full h-full flex flex-col justify-center items-center'>
         <div className='w-full h-full min-h-screen flex flex-col items-center justify-center gap-6'>
           <AnimationText />
