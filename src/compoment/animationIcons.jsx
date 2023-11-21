@@ -42,11 +42,11 @@ export default function AnimationToken () {
           style={{ '--i': 3 }}
         />
         <img
-          className='z-[3] top-60 right-14 3.5xs:right-20 3xs:right-28 2xs:right-32 md:right-52 ight-64  object-cover absolute'
+          className='z-[3] top-60 right-14 3.5xs:right-20 3xs:right-28 2xs:right-32 md:right-48  object-cover absolute'
           src={TokenIcon4}
           alt='TokenIcon4 pannel'
-          width={120}
-          height={120}
+          width={160}
+          height={160}
           style={{ '--i': 4 }}
         />
       </div>
