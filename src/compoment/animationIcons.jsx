@@ -2,8 +2,8 @@ import React from 'react'
 
 import TokenIcon1 from '../assets/tokenImage/ether.svg'
 import TokenIcon2 from '../assets/tokenImage/monero.svg'
-import TokenIcon3 from '../assets/tokenImage/tether.svg'
-import TokenIcon4 from '../assets/tokenImage/yieldz.svg'
+import TokenIcon3 from '../assets/tokenImage/solana.png'
+import TokenIcon4 from '../assets/tokenImage/bitcoin.png'
 import TokenIcon5 from '../assets/tokenImage/zero_gra.svg'
 
 export default function AnimationToken () {
@@ -26,27 +26,27 @@ export default function AnimationToken () {
           style={{ '--i': 1 }}
         />
         <img
-          className='z-[3] top-0 right-10 3.5xs:right-14 3xs:right-20 2xs:right-24 md:right-40 object-cover absolute'
-          src={TokenIcon3}
+          className='z-[3] top-0 right-10 3.5xs:right-16 3xs:right-24 2xs:right-28 md:right-48 object-cover absolute'
+          src={TokenIcon2}
           alt='TokenIcon3 pannel'
-          width={200}
-          height={200}
+          width={160}
+          height={160}
           style={{ '--i': 2 }}
         />
         <img
           className='z-[3] top-32 right-36 3.5xs:right-40 3xs:right-52 2xs:right-56 md:right-72 object-cover absolute'
-          src={TokenIcon2}
+          src={TokenIcon3}
           alt='TokenIcon2 pannel'
-          width={120}
-          height={120}
+          width={110}
+          height={110}
           style={{ '--i': 3 }}
         />
         <img
           className='z-[3] top-60 right-14 3.5xs:right-20 3xs:right-28 2xs:right-32 md:right-52 ight-64  object-cover absolute'
           src={TokenIcon4}
           alt='TokenIcon4 pannel'
-          width={170}
-          height={180}
+          width={120}
+          height={120}
           style={{ '--i': 4 }}
         />
       </div>

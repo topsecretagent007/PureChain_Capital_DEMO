@@ -19,7 +19,7 @@ export default function Home () {
     const timeoutId = setTimeout(() => {
       // Emit the signal or perform any action here
       setLoading(false)
-    }, 3000)
+    }, 2000)
 
     console.log(timeoutId)
   }, [])
@@ -251,7 +251,7 @@ export default function Home () {
             </div>
             <div className='hidden md:w-1/4 md:flex flex-row justify-center items-center logo-coin'>
               <img
-                className='z-[3] top-24 right-0  3xs:right-5 2xs:right-8 md:right-20  object-cover'
+                className='z-[3] top-32 -mt-24 right-0  3xs:right-5 2xs:right-8 md:right-20  object-cover'
                 src={animationLogo}
                 alt='TokenIcon1 pannel'
                 style={{ '--i': 1 }}
