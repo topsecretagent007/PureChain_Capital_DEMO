@@ -25,7 +25,7 @@ export default function Home () {
   }, [])
 
   return (
-    <div className='w-full justify-center items-center flex flex-row bg-gradient-to-r from-blue-500 to-indigo-700'>
+    <div className='w-full justify-center items-center flex flex-row bg-gradient-to-t from-black to-indigo-900'>
       <div className='container w-full h-full flex flex-col justify-center items-center'>
         <div className='w-full h-full min-h-screen flex flex-col items-center justify-center gap-6'>
           <AnimationText />
@@ -126,7 +126,7 @@ export default function Home () {
               {/* <!-- Feature Item 1 --> */}
               <Zoom top>
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
                   data-aos='fade-right'
                   data-aos-duration='1000'
                 >
@@ -145,7 +145,7 @@ export default function Home () {
               {/* <!-- Feature Item 2 --> */}
               <Zoom top>
                 <div
-                  className='flex items-start bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
                   data-aos='fade-up'
                   data-aos-duration='1000'
                 >
@@ -163,7 +163,7 @@ export default function Home () {
               {/* <!-- Feature Item 3 --> */}
               <Zoom top>
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
                   data-aos='fade-left'
                   data-aos-duration='1000'
                 >
@@ -181,7 +181,7 @@ export default function Home () {
               {/* <!-- Feature Item 4 --> */}
               <Zoom bottom>
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
                   data-aos='fade-up-right'
                   data-aos-duration='1500'
                 >
@@ -200,7 +200,7 @@ export default function Home () {
               {/* <!-- Feature Item 5 --> */}
               <Zoom bottom>
                 <div
-                  className='flex items-start bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
                   data-aos='fade-up'
                   data-aos-duration='1500'
                 >
@@ -218,7 +218,7 @@ export default function Home () {
               {/* <!-- Feature Item 6 --> */}
               <Zoom bottom>
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
                   data-aos='fade-up-left'
                   data-aos-duration='1500'
                 >

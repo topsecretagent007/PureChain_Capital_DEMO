@@ -4,7 +4,7 @@ import { BsTwitterX, BsFillEnvelopeFill } from 'react-icons/bs'
 
 export default function Footer () {
   return (
-    <div className='w-full justify-center items-center fiexd flex-row bottom-0 left-0 bg-gradient-to-r from-blue-500 to-indigo-700 py-10 border-t-[0.5px] border-t-blue-200'>
+    <div className='w-full justify-center items-center fiexd flex-row bottom-0 left-0 bg-[#08181b] py-10 border-t-[0.5px] border-t-blue-200'>
       <div className='container w-full flex flex-col justify-center gap-4'>
         <div className='w-full flex flex-row items-center justify-center gap-4'>
           <a

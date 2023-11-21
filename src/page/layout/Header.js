@@ -5,7 +5,7 @@ import LogoImg_Sm from '../../assets/img/pcc_logo.png'
 
 export default function Header () {
   return (
-    <div className='w-full justify-center items-center fiexd absolute top-0 left-0 flex-row bg-gradient-to-r from-blue-500 to-indigo-700 z-10'>
+    <div className='w-full justify-center items-center fiexd absolute top-0 left-0 flex-row bg-black/10 z-10'>
       <div className='w-full container justify-between items-center p-4 mx-auto flex flex-row'>
         <div className='w-full justify-start text-start'>
           <img
