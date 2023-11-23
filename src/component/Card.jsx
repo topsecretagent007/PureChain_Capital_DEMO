@@ -83,10 +83,8 @@ export default function WorkedCard () {
                 className='inline-block relative rounded-lg transition ease-in duration-200 drop-shadow-green cursor-pointer'
               >
                 <Flip left>
-                  <p className='w-[256px] h-[190px] pt-3 px-4 pb-10  my-auto flex-col flex text-[16px] font-semibold items-center rounded-lg bg-[#303030] justify-between'>
-                    <p className='text-[15px] text-white items-center h-[160px] flex'>
-                      {item.text}
-                    </p>
+                  <p className='text-[15px] text-white w-[256px] h-[190px] pt-3 px-4 pb-10 my-auto flex-col flex font-semibold justify-center items-center rounded-lg bg-[#303030]'>
+                    {item.text}
                   </p>
                   <div className='flex flex-row fixed bottom-0 text-white w-full rounded-b-md p-2 border-t-[1px] border-gray-200 gap-3 bg-[#ffffff] justify-center items-center'>
                     <a
