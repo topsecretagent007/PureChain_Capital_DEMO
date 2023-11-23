@@ -49,36 +49,34 @@ export default function WorkedCard () {
         return (
           <div key={index}>
             {currentCard !== index ? (
-              <div
-                onClick={() => activeCard(index)}
-                className='inline-block relative rounded-lg drop-shadow-white transition ease-in duration-200 cursor-pointer'
-              >
-                <Flip right>
+              <Flip right>
+                <div
+                  onClick={() => activeCard(index)}
+                  className='inline-block relative rounded-lg drop-shadow-white transition ease-in duration-200 cursor-pointer'
+                >
                   <img
                     src={item.icon}
                     alt='Shrapnel Logo'
                     className='w-[256px] h-[190px]  pt-3 px-4 pb-10 my-auto rounded-lg bg-[#ffffff]'
                   />
-                  <Flip right>
-                    <div className='flex flex-row fixed bottom-0 text-white w-full rounded-b-md p-2 border-t-[1px] border-gray-200 gap-3 bg-[#303030] justify-center items-center'>
-                      <a
-                        href={item.twitter}
-                        className='text-[20px] text-[#383a96]'
-                        aria-label='Twitter'
-                      >
-                        <BsTwitterX />
-                      </a>
-                      <a
-                        href={item.website}
-                        className='text-[28px] text-[#383a96]'
-                        aria-label='Website'
-                      >
-                        <CgGlobeAlt />
-                      </a>
-                    </div>
-                  </Flip>
-                </Flip>
-              </div>
+                  <div className='flex flex-row fixed bottom-0 text-white w-full rounded-b-md p-2 border-t-[1px] border-gray-200 gap-3 bg-[#303030] justify-center items-center'>
+                    <a
+                      href={item.twitter}
+                      className='text-[20px] text-[#383a96]'
+                      aria-label='Twitter'
+                    >
+                      <BsTwitterX />
+                    </a>
+                    <a
+                      href={item.website}
+                      className='text-[28px] text-[#383a96]'
+                      aria-label='Website'
+                    >
+                      <CgGlobeAlt />
+                    </a>
+                  </div>
+                </div>
+              </Flip>
             ) : (
               <div
                 onClick={() => activeCard(index)}
@@ -90,24 +88,22 @@ export default function WorkedCard () {
                       {item.text}
                     </p>
                   </div>
-                  <Flip left>
-                    <div className='flex flex-row fixed bottom-0 text-white w-full rounded-b-md p-2 border-t-[1px] border-gray-200 gap-3 bg-[#ffffff] justify-center items-center'>
-                      <a
-                        href={item.twitter}
-                        className='text-[20px] text-[#383a96]'
-                        aria-label='Twitter'
-                      >
-                        <BsTwitterX />
-                      </a>
-                      <a
-                        href={item.website}
-                        className='text-[28px] text-[#383a96]'
-                        aria-label='Website'
-                      >
-                        <CgGlobeAlt />
-                      </a>
-                    </div>
-                  </Flip>
+                  <div className='flex flex-row fixed bottom-0 text-white w-full rounded-b-md p-2 border-t-[1px] border-gray-200 gap-3 bg-[#ffffff] justify-center items-center'>
+                    <a
+                      href={item.twitter}
+                      className='text-[20px] text-[#383a96]'
+                      aria-label='Twitter'
+                    >
+                      <BsTwitterX />
+                    </a>
+                    <a
+                      href={item.website}
+                      className='text-[28px] text-[#383a96]'
+                      aria-label='Website'
+                    >
+                      <CgGlobeAlt />
+                    </a>
+                  </div>
                 </Flip>
               </div>
             )}
