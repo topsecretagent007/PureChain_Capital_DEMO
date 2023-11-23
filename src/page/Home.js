@@ -146,20 +146,20 @@ export default function Home () {
               {/* <!-- Feature Item 1 --> */}
               <Zoom top>
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
+                  className='flex items-start bg-[#1f2430] text-white rounded-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px] border border-[#8b8f9b] shadow-md dark:border-gray-700 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 max-w-sm cursor-pointer hover:text-[#1f2430]'
                   data-aos='fade-right'
                   data-aos-duration='1000'
                 >
                   <img
                     src={cardImg1}
                     alt='cardImg1'
-                    className='w-1/3 h-full rounded-l-lg'
+                    className='w-1/3 h-full rounded-l-lg object-cover'
                   />
                   <div className='p-3 text-start'>
                     <h3 className='text-xl font-semibold mb-3'>
                       Proven Expertise
                     </h3>
-                    <p className='text-[14px]'>
+                    <p className='text-[14px] text-[#8b8f9b] font-semibold'>
                       Our decade-long leadership in blockchain shapes the
                       industry. We bring a wealth of expertise that sets us
                       apart..
@@ -168,20 +168,20 @@ export default function Home () {
                 </div>
                 {/* <!-- Feature Item 2 --> */}
                 <div
-                  className='flex items-start bg-black text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
+                  className='flex items-start bg-[#1f2430] text-white rounded-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px] border border-[#8b8f9b] shadow-md dark:border-gray-700 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 max-w-sm cursor-pointer hover:text-[#1f2430]'
                   data-aos='fade-up'
                   data-aos-duration='1000'
                 >
                   <img
                     src={cardImg2}
                     alt='cardImg2'
-                    className='w-1/3 h-full rounded-l-lg'
+                    className='w-1/3 h-full rounded-l-lg object-cover'
                   />
                   <div className='p-3 text-start'>
                     <h3 className='text-xl font-semibold mb-3'>
                       Strategic Investments
                     </h3>
-                    <p className='text-[14px]'>
+                    <p className='text-[14px] text-[#5b606b] font-semibold'>
                       Beyond capital, we offer deep industry connections and
                       insights, crafting strategies for project success.
                     </p>
@@ -189,20 +189,20 @@ export default function Home () {
                 </div>
                 {/* <!-- Feature Item 3 --> */}
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
+                  className='flex items-start bg-[#1f2430] text-white rounded-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px] border border-[#8b8f9b] shadow-md dark:border-gray-700 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 max-w-sm cursor-pointer hover:text-[#1f2430]'
                   data-aos='fade-left'
                   data-aos-duration='1000'
                 >
                   <img
                     src={cardImg3}
                     alt='cardImg3'
-                    className='w-1/3 h-full rounded-l-lg'
+                    className='w-1/3 h-full rounded-l-lg object-cover'
                   />
                   <div className='p-3 text-start'>
                     <h3 className='text-xl font-semibold mb-3'>
                       Global Influence
                     </h3>
-                    <p className='text-[14px]'>
+                    <p className='text-[14px] text-[#5b606b] font-semibold'>
                       Our reach spans the blockchain spectrum, influencing
                       sectors from DeFi to NFTs on a global scale.
                     </p>
@@ -212,20 +212,20 @@ export default function Home () {
               {/* <!-- Feature Item 4 --> */}
               <Zoom bottom>
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
+                  className='flex items-start bg-[#1f2430] text-white rounded-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px] border border-[#8b8f9b] shadow-md dark:border-gray-700 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 max-w-sm cursor-pointer hover:text-[#1f2430]'
                   data-aos='fade-up-right'
                   data-aos-duration='1500'
                 >
                   <img
                     src={cardImg4}
                     alt='cardImg4'
-                    className='w-1/3 h-full rounded-l-lg'
+                    className='w-1/3 h-full rounded-l-lg object-cover'
                   />
                   <div className='p-3 text-start'>
                     <h3 className='text-xl font-semibold mb-3'>
                       Success Stories
                     </h3>
-                    <p className='text-[14px]'>
+                    <p className='text-[14px] text-[#5b606b] font-semibold'>
                       Our portfolio highlights growth and successful ventures,
                       reflecting our commitment to transformative blockchain
                       projects.
@@ -234,20 +234,20 @@ export default function Home () {
                 </div>
                 {/* <!-- Feature Item 5 --> */}
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
+                  className='flex items-start bg-[#1f2430] text-white rounded-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px] border border-[#8b8f9b] shadow-md dark:border-gray-700 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 max-w-sm cursor-pointer hover:text-[#1f2430]'
                   data-aos='fade-up'
                   data-aos-duration='1500'
                 >
                   <img
                     src={cardImg5}
                     alt='cardImg5'
-                    className='w-1/3 h-full rounded-l-lg'
+                    className='w-1/3 h-full rounded-l-lg object-cover'
                   />
                   <div className='p-3 text-start'>
                     <h3 className='text-xl font-semibold mb-3'>
                       Future Vision
                     </h3>
-                    <p className='text-[14px]'>
+                    <p className='text-[14px] text-[#5b606b] font-semibold'>
                       Focused on blockchain's horizon, we champion projects
                       pioneering the future of decentralized technology.
                     </p>
@@ -255,20 +255,20 @@ export default function Home () {
                 </div>
                 {/* <!-- Feature Item 6 --> */}
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
+                  className='flex items-start bg-[#1f2430] text-white rounded-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px] border border-[#8b8f9b] shadow-md dark:border-gray-700 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 max-w-sm cursor-pointer hover:text-[#1f2430]'
                   data-aos='fade-up-left'
                   data-aos-duration='1500'
                 >
                   <img
                     src={cardImg6}
                     alt='cardImg6'
-                    className='w-1/3 h-full rounded-l-lg'
+                    className='w-1/3 h-full rounded-l-lg object-cover'
                   />
                   <div className='p-3 text-start'>
                     <h3 className='text-xl font-semibold mb-3'>
                       Innovation Drivers
                     </h3>
-                    <p className='text-[14px]'>
+                    <p className='text-[14px] text-[#5b606b] font-semibold'>
                       As pioneers, we back projects pushing technological
                       boundaries, steering the blockchain toward a decentralized
                       future.
