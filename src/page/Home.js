@@ -43,6 +43,7 @@ export default function Home () {
         {array.map((key, id) => {
           return (
             <div
+              key={id}
               className='cube_anim duration-[16s] absolute h-[240px] w-[240px] top-4 -left-5 3.5xs:h-[300px] 3.5xs:w-[300px] 3.5xs:top-5 3.5xs:-left-5 3xs:h-[350px] 3xs:w-[350px] 3xs:top-6 2xs:h-[390px] 2xs:w-[390px] 2xs:top-7 2xs:-left-6 xs:h-[490px] xs:w-[490px] xs:top-8 sm:h-[600px] sm:w-[600px] sm:top-10 2sm:h-[680px] 2sm:w-[680px] 2sm:top-16 md:h-[730px] md:w-[730px] md2:h-[800px] md2:w-[800px] path mask'
               style={{ '--i': id }}
             />

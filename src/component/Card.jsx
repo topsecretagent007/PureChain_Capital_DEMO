@@ -3,7 +3,6 @@ import { BsTwitterX } from 'react-icons/bs'
 import { CgGlobeAlt } from 'react-icons/cg'
 import Workedimg1 from '../assets/workedIcon/gunzilla.svg'
 import Workedimg2 from '../assets/workedIcon/shrapnel.png'
-import Bounce from 'react-reveal/Bounce'
 import Flip from 'react-reveal/Flip'
 
 export default function WorkedCard () {
@@ -34,7 +33,6 @@ export default function WorkedCard () {
     }
   ]
 
-  const [cardState, setCardState] = useState(false)
   const [currentCard, setCurrentCard] = useState(-1)
 
   const activeCard = id => {
@@ -83,7 +81,6 @@ export default function WorkedCard () {
               </div>
             ) : (
               <div
-                key={index}
                 onClick={() => activeCard(index)}
                 className='inline-block relative rounded-lg transition ease-in duration-200 drop-shadow-green cursor-pointer'
               >
