@@ -45,7 +45,7 @@ export default function WorkedCard () {
               <img
                 src={item.icon}
                 alt='Shrapnel Logo'
-                className='w-[256px] h-[190px] p-4 my-auto group-hover:hidden rounded-md bg-[#1f2430]'
+                className='w-[256px] h-[190px] p-4 my-auto group-hover:hidden rounded-md bg-[#ffffff]'
               />
             </Flip>
             <Flip left>
