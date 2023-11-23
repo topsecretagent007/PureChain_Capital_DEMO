@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #000000;
 }
 
 @keyframes App-logo-spin {
@@ -111,5 +111,129 @@
 
   20% {
     transform: translateY(-30px)
+  }
+}
+
+@keyframes fillText {
+  from {
+    color: #FFF; /* Or your current text color */
+  }
+  to {
+    color: #48cae4; /* Or whichever color you want to fill with */
+  }
+}
+
+.text-animation {
+  animation: fillText 7s forwards;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.button-gradient {
+  background: linear-gradient(to right, #56CCF2 50%, #2F80ED 100%);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-position 1s ease;
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+.button-gradient:hover {
+  background-position: left bottom;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.typewriter-holder {
+  width: 280px;
+  position: relative;
+  display: block;
+  margin: auto;
+}
+
+.path {
+  transform-style: preserve-3d;
+}
+
+.mask {
+  mask-image: url(../src/assets/mask.png);
+}
+
+.perspective {
+  perspective: 800px;
+}
+
+.cube_anim {
+  transform: rotateZ(calc(var(--i, 0) * 5deg)) rotateY(70deg);
+  animation: cube 14400ms linear infinite;
+  animation-delay: calc(200ms * var(--i));
+  animation-timing-function: linear;
+}
+
+@keyframes cube {
+  0%,
+  100% {
+    background-image: linear-gradient(
+      180deg,
+      #eb4899 0%,
+      #d53bab 15.62%,
+      rgba(197, 49, 184, 0.15) 53.12%,
+      #9d19da 83.33%,
+      #7400fc 100%
+    );
+  }
+  50% {
+    background-image: linear-gradient(
+      180deg,
+      #7400fc 100% #9d19da 83.33%,
+      rgba(197, 49, 184, 0.15) 53.12%,
+      #d53bab 15.62%,
+      #eb4899 0%
+    );
+  }
+
+  from {
+    transform: rotateZ(calc(var(--i, 0) * 5deg)) rotateY(70deg);
+  }
+  to {
+    transform: rotateZ(calc(var(--i, 0) * 5deg - 360deg)) rotateY(70deg);
+  }
+
+  0%,
+  10%,
+  50%,
+  60%,
+  100% {
+    opacity: 0;
+  }
+  15%,
+  45%,
+  65%,
+  95% {
+    opacity: 1;
   }
 }

@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from 'react'
-import Loading from '../compoment/loading'
-import AnimationText from '../compoment/animationText'
-import AnimationToken from '../compoment/animationIcons'
-import WorkedCard from '../compoment/Card'
+import React, { useEffect, useState, useRef } from 'react'
+import Loading from '../component/loading'
+import AnimationText from '../component/animationText'
+import AnimationToken from '../component/animationIcons'
+import WorkedCard from '../component/Card'
 import Zoom from 'react-reveal/Zoom'
 import LightSpeed from 'react-reveal/LightSpeed'
 import Roll from 'react-reveal/Roll'
-import Bounce from 'react-reveal/Bounce'
+import { Fade } from 'react-awesome-reveal'
 import Slide from 'react-reveal/Slide'
 import animationLogo from '../assets/img/pcc_logo.png'
+import cardImg1 from '../assets/cardImg/cardImg1.png'
+import cardImg2 from '../assets/cardImg/cardImg2.png'
+import cardImg3 from '../assets/cardImg/cardImg3.png'
+import cardImg4 from '../assets/cardImg/cardImg4.png'
+import cardImg5 from '../assets/cardImg/cardImg5.png'
+import cardImg6 from '../assets/cardImg/cardImg6.png'
 
 export default function Home () {
   const [loading, setLoading] = useState(false)
@@ -19,13 +25,32 @@ export default function Home () {
     const timeoutId = setTimeout(() => {
       // Emit the signal or perform any action here
       setLoading(false)
-    }, 2000)
+    }, 1000)
 
     console.log(timeoutId)
   }, [])
 
+  const typeWriter = ['About Us']
+
+  const elecRef = useRef(null)
+
+  const array = new Array(36).fill(null)
+
   return (
-    <div className='w-full justify-center items-center flex flex-row bg-[#322f7f]'>
+    <div
+      ref={elecRef}
+      className='w-full justify-center items-center flex flex-row bg-[#0e1111] relative '
+    >
+      <div className='absolute perspective top-32 min-h-screen w-full'>
+        {array.map((key, id) => {
+          return (
+            <div
+              className='cube_anim duration-[16s] absolute h-[240px] w-[240px] top-4 -left-5 3.5xs:h-[300px] 3.5xs:w-[300px] 3.5xs:top-5 3.5xs:-left-5 3xs:h-[350px] 3xs:w-[350px] 3xs:top-6 2xs:h-[390px] 2xs:w-[390px] 2xs:top-7 2xs:-left-6 xs:h-[490px] xs:w-[490px] xs:top-8 sm:h-[600px] sm:w-[600px] sm:top-10 2sm:h-[680px] 2sm:w-[680px] 2sm:top-16 md:h-[730px] md:w-[730px] md2:h-[800px] md2:w-[800px] path mask'
+              style={{ '--i': id }}
+            />
+          )
+        })}
+      </div>
       <div className='container w-full h-full flex flex-col justify-center items-center'>
         <div className='w-full h-full min-h-screen flex flex-col items-center justify-center gap-6'>
           <AnimationText />
@@ -38,7 +63,7 @@ export default function Home () {
           <Zoom bottom>
             <a
               href='#about'
-              className='bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-full transition ease-in duration-200 hover-effect cursor-pointer'
+              className='button-gradient text-white font-bold py-3 px-6 rounded-full transition ease-in duration-200 cursor-pointer'
             >
               Learn More
             </a>
@@ -50,24 +75,25 @@ export default function Home () {
         >
           <div className='w-full flex flex-col md:flex-row h-full justify-center md:justify-between items-center gap-10'>
             <div className='w-full md:w-1/2 h-full flex flex-col text-white gap-4 text-start px-3'>
-              <LightSpeed left cascade>
-                <div className='text-[20px] 3.5xs:text-[24px] 3xs:text-[28px] 2xs:text-[30px] xs:text-[32px] sm:text-[36px] sm2:text-[40px] md:text-[44px] md2:text-[48px] font-bold'>
-                  About Us
-                </div>
-              </LightSpeed>
-              <Bounce>
-                <div className='w-full h-full text-[14px] xs:text-[16px] md:text-[24px] break-words'>
+              <div className='text-[32px] sm:text-[40px] md:text-[48px] font-bold'>
+                About Us
+              </div>
+              <Fade triggerOnce>
+                <p className='text-[16px] md:text-[20px] leading-relaxed'>
                   Purechain Capital is a venture capital firm dedicated to
                   advancing the blockchain industry through strategic
                   investments in innovation and technology. Our expertise lies
                   in nurturing startups and accelerating their growth in the
                   fast-paced world of blockchain.
-                </div>
-              </Bounce>
-              <Slide bottom>
-                <div className='bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-full transition duration-200 w-[190px] cursor-pointer'>
+                </p>
+              </Fade>
+              <Slide direction='up' triggerOnce>
+                <a
+                  href='#portfolio'
+                  className='button-gradient text-white font-bold py-3 px-6 rounded-full transition duration-200 hover:shadow-md w-[190px] cursor-pointer'
+                >
                   View Our Portfolio
-                </div>
+                </a>
               </Slide>
             </div>
             <div className='flex flex-row items-center justify-center gap-5'>
@@ -83,39 +109,33 @@ export default function Home () {
               </h2>
             </LightSpeed>
             <div className='flex flex-col items-center space-y-4 md:space-y-0 md:flex-row justify-around text-[16px] xs:text-[20px] md:text-[24px]'>
-              <Roll left>
-                <div className='text-center'>
-                  <div
-                    className='stat text-2xl xs:text-4xl md:text-5xl font-bold'
-                    data-target='7'
-                  >
-                    7
-                  </div>
-                  <div className='text-xl'>Years in Crypto</div>
+              <div className='text-center'>
+                <div
+                  className='stat text-2xl xs:text-4xl md:text-5xl font-bold'
+                  data-target='7'
+                >
+                  7
                 </div>
-              </Roll>
-              <Roll top>
-                <div className='text-center'>
-                  <div
-                    className='stat text-2xl xs:text-4xl md:text-5xl font-bold'
-                    data-target='130'
-                  >
-                    130
-                  </div>
-                  <div className='text-xl'>Nodes Running</div>
+                <div className='text-xl'>Years in Crypto</div>
+              </div>
+              <div className='text-center'>
+                <div
+                  className='stat text-2xl xs:text-4xl md:text-5xl font-bold'
+                  data-target='130'
+                >
+                  130
                 </div>
-              </Roll>
-              <Roll right>
-                <div className='text-center'>
-                  <div
-                    className='stat text-2xl xs:text-4xl md:text-5xl font-bold'
-                    data-target='10'
-                  >
-                    10
-                  </div>
-                  <div className='text-xl'>Investments</div>
+                <div className='text-xl'>Nodes Running</div>
+              </div>
+              <div className='text-center'>
+                <div
+                  className='stat text-2xl xs:text-4xl md:text-5xl font-bold'
+                  data-target='10'
+                >
+                  10
                 </div>
-              </Roll>
+                <div className='text-xl'>Investments</div>
+              </div>
             </div>
           </div>
         </div>
@@ -126,52 +146,63 @@ export default function Home () {
               {/* <!-- Feature Item 1 --> */}
               <Zoom top>
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
                   data-aos='fade-right'
                   data-aos-duration='1000'
                 >
-                  <div>
-                    <h3 className='text-2xl font-semibold mb-3'>
+                  <img
+                    src={cardImg1}
+                    alt='cardImg1'
+                    className='w-1/3 h-full rounded-l-lg'
+                  />
+                  <div className='p-3 text-start'>
+                    <h3 className='text-xl font-semibold mb-3'>
                       Proven Expertise
                     </h3>
-                    <p>
+                    <p className='text-[14px]'>
                       Our decade-long leadership in blockchain shapes the
                       industry. We bring a wealth of expertise that sets us
                       apart..
                     </p>
                   </div>
                 </div>
-              </Zoom>
-              {/* <!-- Feature Item 2 --> */}
-              <Zoom top>
+                {/* <!-- Feature Item 2 --> */}
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-black text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
                   data-aos='fade-up'
                   data-aos-duration='1000'
                 >
-                  <div>
-                    <h3 className='text-2xl font-semibold mb-3'>
+                  <img
+                    src={cardImg2}
+                    alt='cardImg2'
+                    className='w-1/3 h-full rounded-l-lg'
+                  />
+                  <div className='p-3 text-start'>
+                    <h3 className='text-xl font-semibold mb-3'>
                       Strategic Investments
                     </h3>
-                    <p>
+                    <p className='text-[14px]'>
                       Beyond capital, we offer deep industry connections and
                       insights, crafting strategies for project success.
                     </p>
                   </div>
                 </div>
-              </Zoom>
-              {/* <!-- Feature Item 3 --> */}
-              <Zoom top>
+                {/* <!-- Feature Item 3 --> */}
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
                   data-aos='fade-left'
                   data-aos-duration='1000'
                 >
-                  <div>
-                    <h3 className='text-2xl font-semibold mb-3'>
+                  <img
+                    src={cardImg3}
+                    alt='cardImg3'
+                    className='w-1/3 h-full rounded-l-lg'
+                  />
+                  <div className='p-3 text-start'>
+                    <h3 className='text-xl font-semibold mb-3'>
                       Global Influence
                     </h3>
-                    <p>
+                    <p className='text-[14px]'>
                       Our reach spans the blockchain spectrum, influencing
                       sectors from DeFi to NFTs on a global scale.
                     </p>
@@ -181,52 +212,63 @@ export default function Home () {
               {/* <!-- Feature Item 4 --> */}
               <Zoom bottom>
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
                   data-aos='fade-up-right'
                   data-aos-duration='1500'
                 >
-                  <div>
-                    <h3 className='text-2xl font-semibold mb-3'>
+                  <img
+                    src={cardImg4}
+                    alt='cardImg4'
+                    className='w-1/3 h-full rounded-l-lg'
+                  />
+                  <div className='p-3 text-start'>
+                    <h3 className='text-xl font-semibold mb-3'>
                       Success Stories
                     </h3>
-                    <p>
+                    <p className='text-[14px]'>
                       Our portfolio highlights growth and successful ventures,
                       reflecting our commitment to transformative blockchain
                       projects.
                     </p>
                   </div>
                 </div>
-              </Zoom>
-              {/* <!-- Feature Item 5 --> */}
-              <Zoom bottom>
+                {/* <!-- Feature Item 5 --> */}
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
                   data-aos='fade-up'
                   data-aos-duration='1500'
                 >
-                  <div>
-                    <h3 className='text-2xl font-semibold mb-3'>
+                  <img
+                    src={cardImg5}
+                    alt='cardImg5'
+                    className='w-1/3 h-full rounded-l-lg'
+                  />
+                  <div className='p-3 text-start'>
+                    <h3 className='text-xl font-semibold mb-3'>
                       Future Vision
                     </h3>
-                    <p>
+                    <p className='text-[14px]'>
                       Focused on blockchain's horizon, we champion projects
                       pioneering the future of decentralized technology.
                     </p>
                   </div>
                 </div>
-              </Zoom>
-              {/* <!-- Feature Item 6 --> */}
-              <Zoom bottom>
+                {/* <!-- Feature Item 6 --> */}
                 <div
-                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate'
+                  className='flex items-start bg-gradient-to-r from-blue-900 to-indigo-800 text-white rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl aos-init aos-animate h-[170px]'
                   data-aos='fade-up-left'
                   data-aos-duration='1500'
                 >
-                  <div>
-                    <h3 className='text-2xl font-semibold mb-3'>
+                  <img
+                    src={cardImg6}
+                    alt='cardImg6'
+                    className='w-1/3 h-full rounded-l-lg'
+                  />
+                  <div className='p-3 text-start'>
+                    <h3 className='text-xl font-semibold mb-3'>
                       Innovation Drivers
                     </h3>
-                    <p>
+                    <p className='text-[14px]'>
                       As pioneers, we back projects pushing technological
                       boundaries, steering the blockchain toward a decentralized
                       future.
@@ -261,7 +303,7 @@ export default function Home () {
 
           <WorkedCard />
           <Zoom bottom>
-            <div className='bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 mt-10 rounded-full transition ease-in duration-200 hover-effect cursor-pointer'>
+            <div className='button-gradient text-white font-bold py-3 px-6 mt-10 rounded-full transition ease-in duration-200 hover-effect cursor-pointer'>
               Learn More
             </div>
           </Zoom>
