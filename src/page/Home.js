@@ -30,8 +30,6 @@ export default function Home () {
     console.log(timeoutId)
   }, [])
 
-  const typeWriter = ['About Us']
-
   const elecRef = useRef(null)
 
   const array = new Array(36).fill(null)
