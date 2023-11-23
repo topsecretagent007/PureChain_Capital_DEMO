@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BsTwitterX } from 'react-icons/bs'
 import { CgGlobeAlt } from 'react-icons/cg'
 import Workedimg1 from '../assets/workedIcon/gunzilla.svg'
@@ -33,45 +33,87 @@ export default function WorkedCard () {
       website: 'https://project.com'
     }
   ]
+
+  const [cardState, setCardState] = useState(false)
+  const [currentCard, setCurrentCard] = useState(-1)
+
+  const activeCard = id => {
+    if (id === currentCard) {
+      setCurrentCard(-1)
+    } else {
+      setCurrentCard(id)
+    }
+  }
+
   return (
     <div className='w-full flex flex-wrap gap-8 justify-center'>
       {workedData.map((item, index) => {
         return (
-          <div
-            key={index}
-            className='inline-block relative rounded-lg drop-shadow-white transition ease-in duration-200 hover:drop-shadow-green cursor-pointer group'
-          >
-            <Flip right>
-              <img
-                src={item.icon}
-                alt='Shrapnel Logo'
-                className='w-[256px] h-[190px] p-4 my-auto group-hover:hidden rounded-md bg-[#ffffff]'
-              />
-            </Flip>
-            <Flip left>
-              <div className='w-[256px] h-[190px] pt-3 px-4 pb-8  my-auto group-hover:flex flex-col hidden text-[16px] font-semibold items-center rounded-md bg-[#303030] justify-between'>
-                <p className='text-[15px] text-white items-center h-[160px] flex'>
-                  {item.text}
-                </p>
-                <div className='flex flex-row fixed bottom-0 text-white w-full rounded-b-lg p-2 border-t-[1px] border-gray-200 gap-3 bg-[#303030] justify-center items-center'>
-                  <a
-                    href={item.twitter}
-                    className='text-[14px]'
-                    aria-label='Twitter'
-                  >
-                    <BsTwitterX />
-                  </a>
-                  <a
-                    href={item.website}
-                    className='text-[20px]'
-                    aria-label='Website'
-                  >
-                    <CgGlobeAlt />
-                  </a>
-                </div>
+          <div key={index}>
+            {currentCard !== index ? (
+              <div
+                onClick={() => activeCard(index)}
+                className='inline-block relative rounded-lg drop-shadow-white transition ease-in duration-200 cursor-pointer'
+              >
+                <Flip right>
+                  <img
+                    src={item.icon}
+                    alt='Shrapnel Logo'
+                    className='w-[256px] h-[190px]  pt-3 px-4 pb-10 my-auto rounded-lg bg-[#ffffff]'
+                  />
+                  <Flip right>
+                    <div className='flex flex-row fixed bottom-0 text-white w-full rounded-b-md p-2 border-t-[1px] border-gray-200 gap-3 bg-[#303030] justify-center items-center'>
+                      <a
+                        href={item.twitter}
+                        className='text-[20px] text-[#383a96]'
+                        aria-label='Twitter'
+                      >
+                        <BsTwitterX />
+                      </a>
+                      <a
+                        href={item.website}
+                        className='text-[28px] text-[#383a96]'
+                        aria-label='Website'
+                      >
+                        <CgGlobeAlt />
+                      </a>
+                    </div>
+                  </Flip>
+                </Flip>
               </div>
-            </Flip>
-            <Bounce bottom cascade></Bounce>
+            ) : (
+              <div
+                key={index}
+                onClick={() => activeCard(index)}
+                className='inline-block relative rounded-lg transition ease-in duration-200 drop-shadow-green cursor-pointer'
+              >
+                <Flip left>
+                  <div className='w-[256px] h-[190px] pt-3 px-4 pb-10  my-auto flex-col flex text-[16px] font-semibold items-center rounded-lg bg-[#303030] justify-between'>
+                    <p className='text-[15px] text-white items-center h-[160px] flex'>
+                      {item.text}
+                    </p>
+                  </div>
+                  <Flip left>
+                    <div className='flex flex-row fixed bottom-0 text-white w-full rounded-b-md p-2 border-t-[1px] border-gray-200 gap-3 bg-[#ffffff] justify-center items-center'>
+                      <a
+                        href={item.twitter}
+                        className='text-[20px] text-[#383a96]'
+                        aria-label='Twitter'
+                      >
+                        <BsTwitterX />
+                      </a>
+                      <a
+                        href={item.website}
+                        className='text-[28px] text-[#383a96]'
+                        aria-label='Website'
+                      >
+                        <CgGlobeAlt />
+                      </a>
+                    </div>
+                  </Flip>
+                </Flip>
+              </div>
+            )}
           </div>
         )
       })}
