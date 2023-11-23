@@ -42,7 +42,12 @@ module.exports = {
       '3xl': '1820px'
       // => @media (min-width: 1820px) { ... }
     },
-    extend: {}
+    extend: {
+      dropShadow: {
+        white: '0 0px 10px rgba(97, 97, 97, 0.9)',
+        green: '0 0px 15px rgba(56,58,150, 0.9)'
+      }
+    }
   },
   plugins: []
 }
