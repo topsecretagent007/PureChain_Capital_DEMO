@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purechain Capital</title>
+    <link rel="icon" type="image/x-icon" href="../static/assets/img/pcc_logo.png" />
+    <link rel="stylesheet" href="../static/css/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </head>
+  <body
+    class="bg-gradient-to-r from-blue-500 to-indigo-700 font-sans leading-normal tracking-normal text-white"
+  >
+    <!-- Navbar -->
+    <nav
+      class="bg-gradient-to-r from-blue-500 to-indigo-700 text-white fixed w-full z-10"
+    >
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <a
+          href="#"
+          aria-label="Purechain Capital Home"
+          class="flex text-white font-bold text-3xl"
+        >
+          <img
+            src="../static/assets/img/full_logo_white.svg"
+            alt="Purechain Capital Logo"
+            class="logo-size"
+          />
+        </a>
+        <div class="hidden md:flex">
+          <ul class="list-reset flex space-x-6">
+            <li>
+              <a
+                href="#about"
+                class="text-blue-200 hover:text-gray-100 focus:outline-none focus:text-white"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#portfolio"
+                class="text-blue-200 hover:text-gray-100 focus:outline-none focus:text-white"
+                >Portfolio</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-blue-200 hover:text-gray-100 focus:outline-none focus:text-white"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden text-white focus:outline-none">
+          <!-- Hamburger icon SVG or use a font icon -->
+        </button>
+      </div>
+    </nav>
+
+    <!-- Showcase / Home -->
+    <header
+      class="showcase bg-gradient-to-r from-blue-500 to-indigo-700 text-white min-h-screen flex items-center justify-center"
+      id="top"
+    >
+      <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="text-center">
+          <h1 class="font-extrabold text-6xl mb-6">
+            Investing in World-Class Blockchain Projects
+          </h1>
+          <p class="text-xl mb-8">
+            Discover innovative and ground-breaking technology in the blockchain
+            industry with Purechain Capital.
+          </p>
+          <a
+            href="#about"
+            class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-full transition ease-in duration-200 hover-effect"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-16 bg-gradient-to-r from-blue-500 to-indigo-700 text-white"
+    >
+      <div
+        class="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12 xl:px-32"
+      >
+        <div class="md:w-1/2" data-aos="fade-right" data-aos-duration="1000">
+          <h2 class="text-5xl font-bold mb-6">About Us</h2>
+          <p class="text-xl leading-relaxed mb-8">
+            Purechain Capital is a venture capital firm dedicated to advancing
+            the blockchain industry through strategic investments in innovation
+            and technology. Our expertise lies in nurturing startups and
+            accelerating their growth in the fast-paced world of blockchain.
+          </p>
+          <a
+            href="#portfolio"
+            class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-full transition ease-in duration-200 hover-effect"
+          >
+            View Our Portfolio
+          </a>
+        </div>
+        <div
+          class="md:w-1/2 mt-6 md:mt-0 flex justify-center md:justify-end"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
+          <!-- SVG inline for direct manipulation with CSS -->
+          <div class="svg-container svg_hover w-3/4 md:w-full hover-target">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 200 200"
+              class="w-full h-auto"
+            >
+              <style>
+                .small-circle {
+                  fill: white;
+                  transition: all 0.3s ease-in-out;
+                }
+                .big-circle {
+                  fill: none;
+                  stroke: white;
+                  stroke-width: 2;
+                }
+                .line {
+                  stroke: white;
+                  stroke-width: 2;
+                  stroke-dasharray: 4;
+                }
+                .hover-target:hover .small-circle {
+                  fill: #4fd1c5;
+                }
+              </style>
+              <circle cx="100" cy="40" r="10" class="big-circle" />
+              <circle cx="40" cy="160" r="10" class="big-circle" />
+              <circle cx="160" cy="160" r="10" class="big-circle" />
+              <line x1="100" y1="40" x2="40" y2="160" class="line" />
+              <line x1="100" y1="40" x2="160" y2="160" class="line" />
+              <line x1="160" y1="160" x2="40" y2="160" class="line" />
+              <circle cx="100" cy="40" r="5" class="small-circle" />
+              <circle cx="40" cy="160" r="5" class="small-circle" />
+              <circle cx="160" cy="160" r="5" class="small-circle" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section
+      id="why-choose-us"
+      class="bg-gradient-to-r from-blue-500 to-indigo-700 text-white py-16"
+    >
+      <div class="container mx-auto px-4" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-center text-5xl font-bold mb-20">
+          Why Choose Purechain Capital?
+        </h2>
+        <div
+          class="flex flex-col items-center space-y-4 md:space-y-0 md:flex-row justify-around"
+        >
+          <!-- Stats here -->
+          <div class="text-center">
+            <div class="stat text-5xl font-bold" data-target="7">0</div>
+            <div class="text-xl">Years in Crypto</div>
+          </div>
+          <div class="text-center">
+            <div class="stat text-5xl font-bold" data-target="130">0</div>
+            <div class="text-xl">Nodes Running</div>
+          </div>
+          <div class="text-center">
+            <div class="stat text-5xl font-bold" data-target="10">0</div>
+            <div class="text-xl">Investments</div>
+          </div>
+        </div>
+        <!-- Description text here -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <!-- Each column with description -->
+        </div>
+      </div>
+    </section>
+    <!-- Key Features Section -->
+    <section
+      id="key-features"
+      class="py-16 bg-gradient-to-r from-blue-500 to-indigo-700 text-white"
+    >
+    <div class="container mx-auto px-4 mb-20">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Feature Item 1 -->
+        <div
+          class="flex items-start bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl"
+          data-aos="fade-right" data-aos-duration="1000"
+        >
+            <!-- SVG icon container -->
+            <div class="mr-4">
+              <object
+                type="image/svg+xml"
+                data="../static/assets/img/tick.svg"
+                class="tick-icon"
+              >
+                Your browser does not support SVGs
+              </object>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold mb-3">Proven Expertise</h3>
+              <p>
+                Our decade-long leadership in blockchain shapes the industry. We bring a wealth of expertise that sets us apart..
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature Item 2 -->
+          <div
+            class="flex items-start bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl"
+            data-aos="fade-up" data-aos-duration="1000"
+          >
+            <!-- SVG icon container -->
+            <div class="mr-4">
+              <object
+                type="image/svg+xml"
+                data="../static/assets/img/tick.svg"
+                class="tick-icon"
+              >
+                Your browser does not support SVGs
+              </object>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold mb-3">Strategic Investments</h3>
+              <p>
+                Beyond capital, we offer deep industry connections and insights,
+                crafting strategies for project success.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature Item 3 -->
+          <div
+            class="flex items-start bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl"
+            data-aos="fade-left" data-aos-duration="1000"
+          >
+            <!-- SVG icon container -->
+            <div class="mr-4">
+              <object
+                type="image/svg+xml"
+                data="../static/assets/img/tick.svg"
+                class="tick-icon"
+              >
+                Your browser does not support SVGs
+              </object>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold mb-3">Global Influence</h3>
+              <p>
+                Our reach spans the blockchain spectrum, influencing sectors
+                from DeFi to NFTs on a global scale.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature Item 4 -->
+          <div
+            class="flex items-start bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl"
+            data-aos="fade-up-right" data-aos-duration="1500"
+          >
+            <!-- SVG icon container -->
+            <div class="mr-4">
+              <object
+                type="image/svg+xml"
+                data="../static/assets/img/tick.svg"
+                class="tick-icon"
+              >
+                Your browser does not support SVGs
+              </object>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold mb-3">Success Stories</h3>
+              <p>
+                Our portfolio highlights growth and successful ventures,
+                reflecting our commitment to transformative blockchain projects.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature Item 5 -->
+          <div
+            class="flex items-start bg-gradient-to-r from-indigo-500 to-blue-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl"
+            data-aos="fade-up" data-aos-duration="1500"
+          >
+            <!-- SVG icon container -->
+            <div class="mr-4">
+              <object
+                type="image/svg+xml"
+                data="../static/assets/img/tick.svg"
+                class="tick-icon"
+              >
+                Your browser does not support SVGs
+              </object>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold mb-3">Future Vision</h3>
+              <p>
+                Focused on blockchain's horizon, we champion projects pioneering
+                the future of decentralized technology.
+              </p>
+            </div>
+          </div>
+
+          <!-- Feature Item 6 -->
+          <div
+            class="flex items-start bg-gradient-to-r from-blue-500 to-indigo-500 text-white p-6 rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl"
+            data-aos="fade-up-left" data-aos-duration="1500"
+          >
+            <!-- SVG icon container -->
+            <div class="mr-4">
+              <object
+                type="image/svg+xml"
+                data="../static/assets/img/tick.svg"
+                class="tick-icon"
+              >
+                Your browser does not support SVGs
+              </object>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold mb-3">Innovation Drivers</h3>
+              <p>
+                As pioneers, we back projects pushing technological boundaries,
+                steering the blockchain toward a decentralized future.
+              </p>
+            </div>
+          </div>
+          <!-- Additional feature items as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="bg-gradient-to-r from-blue-500 to-indigo-700 text-white py-16">
+      <div class="container mx-auto px-4 text-center mb-20">
+        <h2 class="text-6xl font-bold mb-6 text-left" data-aos="fade-right" data-aos-duration="1000">Some of The Great Projects</h2>
+        <h2 class="text-6xl font-bold mb-20 text-left" data-aos="fade-right" data-aos-duration="1000">We've Worked With...</h2>
+        <div class="flex flex-wrap justify-center gap-5">
+          <!-- Project Item 1 -->
+          <div class="project-item" data-aos="fade-right" data-aos-duration="1000">
+            <div class="logo-container bg-white rounded-lg p-4 inline-block relative rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl">
+              <img src="../static/assets/img/shrapnel.png" alt="Shrapnel Logo" class="logo-img"/>
+              <div class="social-icons-container absolute bottom-0 w-full border-t-2 border-gray-200 pt-2">
+                <a href="https://twitter.com/project" class="social-icon" aria-label="Twitter">
+                  <i class="fa-brands fa-x-twitter fa-1x"></i>
+                </a>
+                <a href="https://project.com" class="social-icon" aria-label="Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Item 2 -->
+          <div class="project-item" data-aos="fade-right" data-aos-duration="1000">
+            <div class="logo-container bg-white rounded-lg p-4 inline-block relative">
+              <img src="../static/assets/img/gunzilla.svg" alt="Gunzilla Logo" class="logo-img"/>
+              <div class="social-icons-container absolute bottom-0 w-full border-t-2 border-gray-200 pt-2">
+                <a href="https://twitter.com/project" class="social-icon" aria-label="Twitter">
+                  <i class="fa-brands fa-x-twitter fa-1x"></i>
+                </a>
+                <a href="https://project.com" class="social-icon" aria-label="Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Item 3 -->
+          <div class="project-item" data-aos="fade-right" data-aos-duration="1000">
+            <div class="logo-container bg-white rounded-lg p-4 inline-block relative rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl">
+              <img src="../static/assets/img/shrapnel.png" alt="Shrapnel Logo" class="logo-img"/>
+              <div class="social-icons-container absolute bottom-0 w-full border-t-2 border-gray-200 pt-2">
+                <a href="https://twitter.com/project" class="social-icon" aria-label="Twitter">
+                  <i class="fa-brands fa-x-twitter fa-1x"></i>
+                </a>
+                <a href="https://project.com" class="social-icon" aria-label="Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Item 4 -->
+          <div class="project-item" data-aos="fade-right" data-aos-duration="1000">
+            <div class="logo-container bg-white rounded-lg p-4 inline-block relative rounded-lg shadow-lg transition ease-in duration-200 hover:shadow-2xl">
+              <img src="../static/assets/img/shrapnel.png" alt="Shrapnel Logo" class="logo-img"/>
+              <div class="social-icons-container absolute bottom-0 w-full border-t-2 border-gray-200 pt-2">
+                <a href="https://twitter.com/project" class="social-icon" aria-label="Twitter">
+                  <i class="fa-brands fa-x-twitter fa-1x"></i>
+                </a>
+                <a href="https://project.com" class="social-icon" aria-label="Website">
+                  <i class="fas fa-globe"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Repeat for other projects with adjusted sizes -->
+        </div>
+        <a href="#contact" class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-full transition ease-in duration-200 mt-8">
+          Work With Us
+        </a>
+      </div>
+    </section>
+
+
+    <footer class="bg-gradient-to-r from-blue-500 to-indigo-700 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col items-center text-center">
+          <!-- Social Links -->
+          <div class="flex justify-center space-x-4 mb-4">
+            <a href="https://twitter.com/purechaincap" class="hover:text-gray-200" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter fa-2x"></i>
+            </a>
+            <a href="mailto:team@purechaincapital.com" class="hover:text-gray-200" aria-label="Email">
+              <i class="fas fa-envelope fa-2x"></i>
+            </a>
+          </div>
+    
+          <!-- Legal Links -->
+          <div class="flex justify-center mb-2">
+            <a href="/privacy-policy" class="hover:text-gray-200 transition-colors duration-200 mx-2">Privacy Policy</a>
+            <span class="text-gray-400 mx-2">|</span>
+            <a href="/terms-of-use" class="hover:text-gray-200 transition-colors duration-200 mx-2">Terms of Use</a>
+          </div>
+    
+          <!-- Copyright and Contact Info -->
+          <div class="text-gray-300 mt-4 mb-2">
+            © 2023 Purechain Capital. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    
+    
+    <script src="../static/js/scripts.js"></script>
+    <script src="../static/js/counting.js"></script>
+    <script>
+      // Smooth scroll for links with hashes
+      $('a[href*="#"]').on("click", function (e) {
+        e.preventDefault();
+
+        $("html, body").animate(
+          {
+            scrollTop: $($(this).attr("href")).offset().top,
+          },
+          500,
+          "linear"
+        );
+      });
+    </script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
