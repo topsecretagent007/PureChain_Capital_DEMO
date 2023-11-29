@@ -1,18 +1,16 @@
-import './App.css'
+import './App.css';
 
-import Header from '../src/page/layout/Header'
-import Footer from '../src/page/layout/Footer'
+import Header from './pages/Layout/Header';
 
-import Home from '../src/page/Home'
+import Home from './pages/Home';
 
-function App () {
+function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Header />
       <Home />
-      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

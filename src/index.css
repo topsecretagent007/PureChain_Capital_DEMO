@@ -4,10 +4,31 @@
 
 @layer components {
   .container {
-    @apply w-full mx-auto max-w-[1200px];
+    @apply w-full mx-auto max-w-[1100px];
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #15151975;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5f677c;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 body {
   margin: 0;
