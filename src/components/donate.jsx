@@ -13,7 +13,7 @@ export default function Donate () {
       </div>
       <div className='w-full h-full justify-center items-center flex flex-row'>
         <div className='w-full h-[calc(100%-140px)] flex flex-col gap-1 items-center justify-center object-cover overflow-hidden'>
-          <audio src={currentMusic} controls className='w-full max-w-md' />
+          <audio src={currentMusic} controls className='w-full max-w-sm' />
           <div className='w-full  justify-center gap-7 items-center flex flex-row text-white font-semibold text-[16px]'>
             <div
               onClick={() => console.log('Public')}
