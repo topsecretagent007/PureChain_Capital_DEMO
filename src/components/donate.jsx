@@ -30,6 +30,9 @@ export default function Donate () {
           </div>
         </div>
       </div>
+      <div className='w-full justify-center items-center flex flex-row text-white font-semibold text-[20px] cursor-pointer mb-10'>
+        Donate
+      </div>
     </div>
   )
 }
